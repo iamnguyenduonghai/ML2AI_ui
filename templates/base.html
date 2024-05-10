@@ -1,3 +1,4 @@
+{% load i18n %}
 <!doctype html>
 <html lang="en">
 <head>
@@ -11,7 +12,7 @@
     <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
     <style>
         body {
             background-color: #373536;
@@ -30,15 +31,72 @@
     {% endblock %}
 </head>
 <body>
-
-<div class="mx-3 my-3" id="main-space">
-{% block body %}
-{% endblock %}
+<div class="row">
+    <div class="col-12">
+        <nav class="navbar row" style="background-color: #2B77A4;">
+            <div class="col-6">
+                <div class="container-fluid">
+                    <span class="navbar-brand h1" style="color: #F4F1EB">
+                        <a href="{% url 'HomeList' %}">
+                            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAACXBIWXMAAAsTAAALEwEAmpwYAAAEL0lEQVR4nO2WXWxTZRzGO8ErL/y4MILRoIYrE6Mu8UbiAu3p2XrOqbL2tGygCCQjM2M9H90sGwWigBdOIpiQ6QZj6UB0QRKRC8WlO+/ZxsfmmEaGH4lGo4GpmI3iRnva85j3bF320XYbKzfGJ3kvTs/J++v/433/j832vxYoiWBbUMegQhCtJnjKlk8xzIZ71nDeWofL0+rgxKrCwoq7LagGp0yAlkFgby+SKsHvu4C78sUtcAo+UvxiWbJarUuwbn/KKfjP0BcKQX2NjlTKBPqGAPonarqwfFEROnnxfVbwxxheHHNwXvT1D4BK7z4P+rxa8DwpETwvazAPXIIZPoekquMHG1BA9wh24QmZ4C1Zw46QjvvnB+bEI1xpuXGi/RSOnTiJUPhN0zCSFviPP/+ywA6XyNFvJQKvrONLRUMkEMUK6zcNyxSC4VA3DFVHKqjjckUfrPJkVVFR0VJG8N1q/+RTZFIabC/x8Nn2UDS8qhBgJA4MXh8vQaALT2eFOnhxlVPwf0U3bj91+vbBUfAUFrky3ngygaF248HMUK50JcOLcalmRyIU3gPBs8FK89VrQwsCv34W98oazksEYxSo6IhJGjZmjdbOed/2lG+OJxIJjI6NoeHdQ+DWlqOppS0nWNLxuKqjkC5Zw3MWVMN1ScOztK5zHi+Hy3u4MlCbmAoxTTNnqsWPsUQmiNG0plcamhM2VXbe00A39JZvxuUr32esb6aIFQ2PpCO2ou7BA1P3pREHNLwgExTNip6eSYYXE5u2BsyWyIcYHh6ZBP0zOgrDMBbUXJMCClSCM+lsqARfTIM7OE/zulcqjHh8WqYtBet2o7HpaGYwUCARNMsazmZcBBcpsOcq0Dtxs8mdWD0JZt3+S+8cOJQxtZXVtdh/sPHOgBnBp4fCe1MzofS2oseq9dhHt59qHaenpPrzaam2uzzVDs5rXujtn9bRTUciYHgRP/38S1ZwtY5HczUXhSs6VtEGm9VcdMyxbl+HU/CZb+xrsICBYL0FiBxvv7PHyeFet3z/e43XquQQyjZuRXD7bnSduzDncVI1PLaoC8Tu8n4QCNbHM3ZYDnC2K1PWJq5Mgpt0aGQHc55wyUtlyVjs5qLAVFInBGtIfDePIVHkEh9yun0j23fuMUdu3JgTnJ7H+RmLXCnLCv5ham8qqlSjf+CbWeC+/q8tsJMTCyei8ykEHTJBG633DCNAXUlKJfh2VxRLbbnEsmuXOVxiyMmLg+s3VRpTo78Vj2ObWpdkBd+voiguSVufgwMwd45bnx/T1odOLYlgn0RQF4jivpzQGdGvdLp9f4vrtxjNR9twuPU4Xt7ymkFnNlMirslm9uQePDxvSDaxrH8Fw4utxW7/EK0/w/s+sxd7nkm/VzrBTNrbi5a9/S2f9janZA1V1MwpOjrybuht/yX9C2MaPetKQO9ZAAAAAElFTkSuQmCC">
+                        </a>
+                        &nbsp;Sex gay
+                    </span>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="container-fluid" id="welcome-status" style="color: #F4F1EB; text-align: right;"
+                     data-trans-morning="{% trans 'Good morning!' %}"
+                     data-trans-afternoon="{% trans 'Good afternoon!' %}"
+                     data-trans-evening="{% trans 'Good evening!' %}"
+                     data-class-morning="bi bi-cloud-sun"
+                     data-class-afternoon="bi bi-sun"
+                     data-class-evening="bi bi-moon-stars">
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="container-fluid">
+                    <input style="background-color: #F4F1EB; border-radius: 20px" class="form-control form-control-sm" id="find-algorithms" placeholder="{% trans 'Search' %}">
+                </div>
+            </div>
+        </nav>
+        <div data-base64-logo="data:image/png;base64,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"
+             class="mx-3 my-3" id="main-space">
+        {% block body %}
+        {% endblock %}
+        </div>
+    </div>
 </div>
-
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+<script>
+    const $welcome_status = $('#welcome-status')
+    function getTimeOfDay() {
+        const now = new Date();
+        const hour = now.getHours();
+        if (hour >= 5 && hour < 12) {
+            return 0;
+        } else if (hour >= 12 && hour < 18) {
+            return 1;
+        } else {
+            return 2;
+        }
+    }
+
+    const timeOfDay = getTimeOfDay();
+
+    let now_time = new Date()
+    if (timeOfDay === 0) {
+        $welcome_status.html(`<i class="${$welcome_status.attr('data-class-morning')}"></i>&nbsp;${$welcome_status.attr('data-trans-morning')}`)
+    }
+    else if (timeOfDay === 1) {
+        $welcome_status.html(`<i class="${$welcome_status.attr('data-class-afternoon')}"></i>&nbsp;${$welcome_status.attr('data-trans-afternoon')}`)
+    }
+    else {
+        $welcome_status.html(`<i class="${$welcome_status.attr('data-class-evening')}"></i>&nbsp;${$welcome_status.attr('data-trans-evening')}`)
+    }
+</script>
 {% block footerScript %}
 {% endblock %}
 </body>

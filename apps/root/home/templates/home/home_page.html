@@ -28,95 +28,114 @@
     .content-header, .content-body, .content-footer {
         margin-bottom: 50px;
     }
+    .card-title {
+        font-size: medium;
+    }
+    .pin-icon {
+        position: absolute;
+        z-index: 1000;
+        color: red;
+        transform: translateX(0px) translateY(-30px);
+        rotate: -30deg;
+    }
     </style>
 {% endblock %}
 
 {% block body %}
 <div class="row">
-    <div class="col-12 col-md-12 col-lg-3 overflow-auto" style="max-height: 95vh;">
+    <div class="col-12 col-md-12 col-lg-3 overflow-auto" style="max-height: 90vh; padding-right: 50px">
         <div class="row">
-            <div class="col-11 tab-title" id="linear-regression">
-                <div class="card mb-3">
-                    <div class="card-body">
-                        <h5 class="card-title"><b>Linear Regression</b></h5>
-                    </div>
-                </div>
-            </div>
-            <div class="col-11 tab-title" id="logistic-regression">
-                <div class="card mb-3">
-                    <div class="card-body">
-                        <h5 class="card-title"><b>Logistic Regression</b></h5>
-                    </div>
-                </div>
-            </div>
-            <div class="col-11 tab-title" id="decision-trees">
-                <div class="card mb-3">
-                    <div class="card-body">
-                        <h5 class="card-title"><b>Decision Trees</b></h5>
-                    </div>
-                </div>
-            </div>
-            <div class="col-11 tab-title" id="random-forests">
-                <div class="card mb-3">
-                    <div class="card-body">
-                        <h5 class="card-title"><b>Random Forests</b></h5>
-                    </div>
-                </div>
-            </div>
-            <div class="col-11 tab-title" id="gbm">
-                <div class="card mb-3">
-                    <div class="card-body">
-                        <h5 class="card-title"><b>Gradient Boosting Machines (GBM)</b></h5>
-                    </div>
-                </div>
-            </div>
-            <div class="col-11 tab-title" id="svm">
-                <div class="card mb-3">
-                    <div class="card-body">
-                        <h5 class="card-title"><b>Support Vector Machines (SVM)</b></h5>
-                    </div>
-                </div>
-            </div>
-            <div class="col-11 tab-title" id="k-nn">
-                <div class="card mb-3">
-                    <div class="card-body">
-                        <h5 class="card-title"><b>k-Nearest Neighbors (k-NN)</b></h5>
-                    </div>
-                </div>
-            </div>
-            <div class="col-11 tab-title" id="naive-bayes">
-                <div class="card mb-3">
-                    <div class="card-body">
-                        <h5 class="card-title"><b>Naive Bayes</b></h5>
-                    </div>
-                </div>
-            </div>
-            <div class="col-11 tab-title" id="neural-networks">
-                <div class="card mb-3">
-                    <div class="card-body">
-                        <h5 class="card-title"><b>Neural Networks (includes Deep Learning)</b></h5>
-                    </div>
-                </div>
-            </div>
-            <div class="col-11">
-                <button type="button" class="w-100 btn btn-outline-secondary"
+            <div class="col-12 mb-3">
+                <button type="button" class="w-100 btn btn-outline-secondary btn-sm"
                         id="collapse-menu-btn"
-                        data-state-show="{% trans 'Rise' %}"
-                        data-state-hide="{% trans 'Set' %}">
-                    {% trans 'Set' %}
+                        data-state-show="{% trans 'Menu go down' %}"
+                        data-state-hide="{% trans 'Menu go up' %}">
+                    {% trans 'Menu go up' %}
                 </button>
+            </div>
+            <div class="col-12 tab-title" id="linear-regression">
+                <div class="card mb-3">
+                    <span class="pin-icon" hidden><i style="font-size: xx-large" class="bi bi-pin-fill"></i></span>
+                    <div class="card-body">
+                        <span class="card-title"><b>Linear Regression</b></span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 tab-title" id="logistic-regression">
+                <div class="card mb-3">
+                    <span class="pin-icon" hidden><i style="font-size: xx-large" class="bi bi-pin-fill"></i></span>
+                    <div class="card-body">
+                        <span class="card-title"><b>Logistic Regression</b></span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 tab-title" id="decision-trees">
+                <div class="card mb-3">
+                    <span class="pin-icon" hidden><i style="font-size: xx-large" class="bi bi-pin-fill"></i></span>
+                    <div class="card-body">
+                        <span class="card-title"><b>Decision Trees</b></span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 tab-title" id="random-forests">
+                <div class="card mb-3">
+                    <span class="pin-icon" hidden><i style="font-size: xx-large" class="bi bi-pin-fill"></i></span>
+                    <div class="card-body">
+                        <span class="card-title"><b>Random Forests</b></span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 tab-title" id="gbm">
+                <div class="card mb-3">
+                    <span class="pin-icon" hidden><i style="font-size: xx-large" class="bi bi-pin-fill"></i></span>
+                    <div class="card-body">
+                        <span class="card-title"><b>Gradient Boosting Machines (GBM)</b></span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 tab-title" id="svm">
+                <div class="card mb-3">
+                    <span class="pin-icon" hidden><i style="font-size: xx-large" class="bi bi-pin-fill"></i></span>
+                    <div class="card-body">
+                        <span class="card-title"><b>Support Vector Machines (SVM)</b></span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 tab-title" id="k-nn">
+                <div class="card mb-3">
+                    <span class="pin-icon" hidden><i style="font-size: xx-large" class="bi bi-pin-fill"></i></span>
+                    <div class="card-body">
+                        <span class="card-title"><b>k-Nearest Neighbors (k-NN)</b></span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 tab-title" id="naive-bayes">
+                <div class="card mb-3">
+                    <span class="pin-icon" hidden><i style="font-size: xx-large" class="bi bi-pin-fill"></i></span>
+                    <div class="card-body">
+                        <span class="card-title"><b>Naive Bayes</b></span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 tab-title" id="neural-networks">
+                <div class="card mb-3">
+                    <span class="pin-icon" hidden><i style="font-size: xx-large" class="bi bi-pin-fill"></i></span>
+                    <div class="card-body">
+                        <span class="card-title"><b>Neural Networks (includes Deep Learning)</b></span>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-    <div class="col-12 col-md-12 col-lg-9 overflow-auto" style="max-height: 95vh;">
+    <div class="col-12 col-md-12 col-lg-9">
         <div class="row">
             <div class="col-12 tab-content" id="linear-regression-content" hidden>
                 <div class="content-header">
                     <h1>Linear Regression</h1><hr>
                     <h6 style="text-align: right;">Hồi quy tuyến tính</h6>
                 </div>
-                <div class="content-body">
-                    <h5>{% trans 'Content' %}</h5>
+                <div class="content-body overflow-auto" style="max-height: 75vh;">
+                    <p>{% trans 'Content' %}</p><p>{% trans 'Content' %}</p><p>{% trans 'Content' %}</p><p>{% trans 'Content' %}</p><p>{% trans 'Content' %}</p><p>{% trans 'Content' %}</p><p>{% trans 'Content' %}</p><p>{% trans 'Content' %}</p><p>{% trans 'Content' %}</p><p>{% trans 'Content' %}</p><p>{% trans 'Content' %}</p><p>{% trans 'Content' %}</p><p>{% trans 'Content' %}</p><p>{% trans 'Content' %}</p><p>{% trans 'Content' %}</p><p>{% trans 'Content' %}</p><p>{% trans 'Content' %}</p><p>{% trans 'Content' %}</p><p>{% trans 'Content' %}</p><p>{% trans 'Content' %}</p><p>{% trans 'Content' %}</p><p>{% trans 'Content' %}</p><p>{% trans 'Content' %}</p><p>{% trans 'Content' %}</p><p>{% trans 'Content' %}</p><p>{% trans 'Content' %}</p><p>{% trans 'Content' %}</p><p>{% trans 'Content' %}</p><p>{% trans 'Content' %}</p><p>{% trans 'Content' %}</p><p>{% trans 'Content' %}</p><p>{% trans 'Content' %}</p><p>{% trans 'Content' %}</p><p>{% trans 'Content' %}</p><p>{% trans 'Content' %}</p><p>{% trans 'Content' %}</p><p>{% trans 'Content' %}</p><p>{% trans 'Content' %}</p><p>{% trans 'Content' %}</p><p>{% trans 'Content' %}</p><p>{% trans 'Content' %}</p><p>{% trans 'Content' %}</p><p>{% trans 'Content' %}</p><p>{% trans 'Content' %}</p><p>{% trans 'Content' %}</p><p>{% trans 'Content' %}</p><p>{% trans 'Content' %}</p><p>{% trans 'Content' %}</p><p>{% trans 'Content' %}</p><p>{% trans 'Content' %}</p><p>{% trans 'Content' %}</p><p>{% trans 'Content' %}</p><p>{% trans 'Content' %}</p><p>{% trans 'Content' %}</p><p>{% trans 'Content' %}</p><p>{% trans 'Content' %}</p><p>{% trans 'Content' %}</p><p>{% trans 'Content' %}</p><p>{% trans 'Content' %}</p><p>{% trans 'Content' %}</p><p>{% trans 'Content' %}</p><p>{% trans 'Content' %}</p>
                     <div class="mathjax-main"></div>
                     <div class="mathjax-sub"></div>
                 </div>
@@ -129,8 +148,8 @@
                     <h1>Logistic Regression</h1><hr>
                     <h6 style="text-align: right;">Hồi quy Logistic</h6>
                 </div>
-                <div class="content-body">
-                    <h5>{% trans 'Content' %}</h5>
+                <div class="content-body overflow-auto" style="max-height: 75vh;">
+                    <p>{% trans 'Content' %}</p>
                     <div class="mathjax-main"></div>
                     <div class="mathjax-sub"></div>
                 </div>
@@ -143,8 +162,8 @@
                     <h1>Decision trees</h1><hr>
                     <h6 style="text-align: right;">Cây quyết định</h6>
                 </div>
-                <div class="content-body">
-                    <h5>{% trans 'Content' %}</h5>
+                <div class="content-body overflow-auto" style="max-height: 75vh;">
+                    <p>{% trans 'Content' %}</p>
                     <div class="mathjax-main"></div>
                     <div class="mathjax-sub"></div>
                 </div>
@@ -157,8 +176,8 @@
                     <h1>Random forests</h1><hr>
                     <h6 style="text-align: right;">Thuật toán Random forests</h6>
                 </div>
-                <div class="content-body">
-                    <h5>{% trans 'Content' %}</h5>
+                <div class="content-body overflow-auto" style="max-height: 75vh;">
+                    <p>{% trans 'Content' %}</p>
                     <div class="mathjax-main"></div>
                     <div class="mathjax-sub"></div>
                 </div>
@@ -171,8 +190,8 @@
                     <h1>Gradient Boosting Machines (GBM)</h1><hr>
                     <h6 style="text-align: right;">Thuật toán tăng cường GBM</h6>
                 </div>
-                <div class="content-body">
-                    <h5>{% trans 'Content' %}</h5>
+                <div class="content-body overflow-auto" style="max-height: 75vh;">
+                    <p>{% trans 'Content' %}</p>
                     <div class="mathjax-main"></div>
                     <div class="mathjax-sub"></div>
                 </div>
@@ -185,8 +204,8 @@
                     <h1>Support Vector Machines (SVM)</h1><hr>
                     <h6 style="text-align: right;">Máy vec-to hỗ trợ</h6>
                 </div>
-                <div class="content-body">
-                    <h5>{% trans 'Content' %}</h5>
+                <div class="content-body overflow-auto" style="max-height: 75vh;">
+                    <p>{% trans 'Content' %}</p>
                     <div class="mathjax-main"></div>
                     <div class="mathjax-sub"></div>
                 </div>
@@ -199,8 +218,8 @@
                     <h1>k-Nearest Neighbors (k-NN)</h1><hr>
                     <h6 style="text-align: right;">Thuật toán k-hàng xóm gần nhất</h6>
                 </div>
-                <div class="content-body">
-                    <h5>{% trans 'Content' %}</h5>
+                <div class="content-body overflow-auto" style="max-height: 75vh;">
+                    <p>{% trans 'Content' %}</p>
                     <div class="mathjax-main"></div>
                     <div class="mathjax-sub"></div>
                 </div>
@@ -213,8 +232,8 @@
                     <h1>Naive Bayes</h1><hr>
                     <h6 style="text-align: right;">Thuật toán Naive Bayes</h6>
                 </div>
-                <div class="content-body">
-                    <h5>{% trans 'Content' %}</h5>
+                <div class="content-body overflow-auto" style="max-height: 75vh;">
+                    <p>{% trans 'Content' %}</p>
                     <div class="mathjax-main"></div>
                     <div class="mathjax-sub"></div>
                 </div>
@@ -227,8 +246,8 @@
                     <h1>Neural Networks</h1><hr>
                     <h6 style="text-align: right;">Mạng Nơ-ron</h6>
                 </div>
-                <div class="content-body">
-                    <h5>{% trans 'Content' %}</h5>
+                <div class="content-body overflow-auto" style="max-height: 75vh;">
+                    <p>{% trans 'Content' %}</p>
                     <div class="mathjax-main"></div>
                     <div class="mathjax-sub"></div>
                 </div>

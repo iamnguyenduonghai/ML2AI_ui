@@ -2,6 +2,7 @@ const $tab_title = $('.tab-title')
 const $tab_content = $('.tab-content')
 const $card = $('.card')
 const $collapse_menu_btn = $('#collapse-menu-btn')
+const $find = $('#find-algorithms')
 
 $card.on('click', function () {
     $card.css({
@@ -12,6 +13,7 @@ $card.on('click', function () {
         'transition': 'transform 0.1s ease-in-out'
     })
     $card.removeClass('current-card')
+    $card.find('.pin-icon').prop('hidden', true)
     $(this).css({
         'background-color': '#2B77A4',
         'color': '#F4F1EB',
@@ -20,6 +22,7 @@ $card.on('click', function () {
         'transition': 'transform 0.1s ease-in-out'
     })
     $(this).addClass('current-card')
+    $(this).find('.pin-icon').prop('hidden', false)
 })
 
 $tab_title.on('click', function (){
@@ -44,6 +47,15 @@ $collapse_menu_btn.on('click', function (){
         $(this).css({
             'transform': 'translateX(30px)',
             'transition': 'transform 0.1s ease-in-out'
+        })
+    }
+})
+
+$find.on('input', function () {
+    let content =  $(this).val().toLowerCase()
+    if (content !== '') {
+        $tab_title.each(function () {
+            $(this).prop('hidden', !$(this).find('.card-title').text().toLowerCase().includes(content))
         })
     }
 })
