@@ -1,0 +1,134 @@
+{% extends 'base.html' %}
+{% load i18n %}
+{% load static %}
+{% block title %}Home Page{% endblock %}
+
+{% block cssHeader %}
+    <style>
+    .card {
+        background-color: #F4F1EB;
+        color: #2B77A4;
+    }
+    .bg-2B77A4 {
+        background-color: #2B77A4;
+    }
+    .card:hover {
+        background-color: #2B77A4;
+        color: #F4F1EB;
+        text-align: right;
+        transform: translateX(30px);
+        transition: transform 0.1s ease-in-out;
+    }
+    hr {
+        flex-grow: 1;
+        border: none;
+        height: 1px;
+        background-color: #F4F1EB;
+    }
+    .content-header, .content-body, .content-footer {
+        margin-bottom: 50px;
+    }
+    </style>
+{% endblock %}
+
+{% block body %}
+<div class="row">
+    <div class="col-12 col-md-12 col-lg-3 overflow-auto" style="max-height: 95vh;">
+        <div class="row">
+            <div class="col-11 tab-title" id="linear-regression">
+                <div class="card mb-3">
+                    <div class="card-body">
+                        <h5 class="card-title"><b>Linear regression</b></h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-11 tab-title" id="logistic-regression">
+                <div class="card mb-3">
+                    <div class="card-body">
+                        <h5 class="card-title"><b>Logistic regression</b></h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-11 tab-title" id="decision-trees">
+                <div class="card mb-3">
+                    <div class="card-body">
+                        <h5 class="card-title"><b>Decision Trees</b></h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-11 tab-title" id="random-forests">
+                <div class="card mb-3">
+                    <div class="card-body">
+                        <h5 class="card-title"><b>Random Forests</b></h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-11 tab-title" id="gbm">
+                <div class="card mb-3">
+                    <div class="card-body">
+                        <h5 class="card-title"><b>Gradient Boosting Machines (GBM)</b></h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-11 tab-title" id="svm">
+                <div class="card mb-3">
+                    <div class="card-body">
+                        <h5 class="card-title"><b>Support Vector Machines (SVM)</b></h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-11 tab-title" id="k-nn">
+                <div class="card mb-3">
+                    <div class="card-body">
+                        <h5 class="card-title"><b>k-Nearest Neighbors (k-NN)</b></h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-11 tab-title" id="naive-bayes">
+                <div class="card mb-3">
+                    <div class="card-body">
+                        <h5 class="card-title"><b>Naive Bayes</b></h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-11 tab-title" id="neural-networks">
+                <div class="card mb-3">
+                    <div class="card-body">
+                        <h5 class="card-title"><b>Neural Networks (includes Deep Learning)</b></h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-11">
+                <button type="button" class="w-100 btn btn-outline-secondary"
+                        id="collapse-menu-btn"
+                        data-state-show="{% trans 'Rise' %}"
+                        data-state-hide="{% trans 'Set' %}">
+                    {% trans 'Set' %}
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="col-12 col-md-12 col-lg-9 overflow-auto" style="max-height: 95vh;">
+        <div class="row">
+            <div class="col-12 tab-content" id="linear-regression-content" hidden>
+                <div class="content-header">
+                    <h1>Linear regression</h1><hr>
+                    <h6 style="text-align: right;">Hồi quy tuyến tính</h6>
+                </div>
+                <div class="content-body">
+                    <h5>{% trans 'Content' %}</h5>
+                    <div class="mathjax-main"></div>
+                    <div class="mathjax-sub"></div>
+                </div>
+                <div class="content-footer">
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block footerScript %}
+    <script src="{% static 'home/home.js' %}"></script>
+{% endblock %}
