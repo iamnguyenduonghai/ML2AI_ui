@@ -19,5 +19,6 @@ from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('apps.root.urls')),
+    path('', include('apps.home.urls')),
+    path('app/comment-emotion/', include('apps.comment_emotion.urls')),
 ]

@@ -2,9 +2,9 @@ from django.views import View
 from django.shortcuts import render
 
 
-class HomeList(View):
+class CommentEmotionTest(View):
     @classmethod
     def get(cls, request, *args, **kwargs):
         context = {}
-        return render(request, 'home/home_page.html', context)
+        return render(request, 'comment_emotion/comment_emotion_page.html', context)
 
