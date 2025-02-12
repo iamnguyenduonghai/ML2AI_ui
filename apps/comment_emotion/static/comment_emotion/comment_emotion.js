@@ -18,7 +18,6 @@ $(document).ready(function() {
         }
     })
 
-
     $("#fileInput").on("change", function(event) {
         const file = event.target.files[0];
         if (!file) return;

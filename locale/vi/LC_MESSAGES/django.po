@@ -79,10 +79,6 @@ msgstr "Phân loại cảm xúc văn bản"
 msgid "beta"
 msgstr "thử nghiệm"
 
-#: .\templates\base.html:33
-msgid "ABCXYZ"
-msgstr "ABCXYZ"
-
 #: .\templates\base.html:39
 msgid "Good morning!"
 msgstr "Chào buổi sáng!"
