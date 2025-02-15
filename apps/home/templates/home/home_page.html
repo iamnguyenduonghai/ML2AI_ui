@@ -19,12 +19,22 @@
             </thead>
             <tbody>
                 <tr>
-                    <th>1</th>
+                    <td>1</td>
                     <td>
                         <a href="{% url 'CommentEmotionTest' %}" class="text-decoration-none" data-bs-toggle="tooltip" data-bs-title="{% trans 'Run' %}">
                             <i class="bi bi-play-circle-fill text-success"></i>
                         </a>
                         {% trans 'Text emotion classification' %}
+                    </td>
+                    <td><span class="badge rounded-pill text-bg-danger">{% trans 'stabled' %}</span></td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>
+                        <a href="{% url 'CommentEmotionTest' %}" class="text-decoration-none" data-bs-toggle="tooltip" data-bs-title="{% trans 'Run' %}">
+                            <i class="bi bi-play-circle-fill text-success"></i>
+                        </a>
+                        {% trans 'Menu sequential recommender system' %}
                     </td>
                     <td><span class="badge rounded-pill text-bg-primary">{% trans 'beta' %}</span></td>
                 </tr>

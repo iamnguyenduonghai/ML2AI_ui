@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-02-09 13:58+0700\n"
+"POT-Creation-Date: 2025-02-15 13:48+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -23,41 +23,38 @@ msgid "Comment emotion"
 msgstr "Cảm xúc của bình luận"
 
 #: .\apps\comment_emotion\templates\comment_emotion\comment_emotion_page.html:13
-msgid "Single test"
-msgstr "Test đơn lẻ"
-
-#: .\apps\comment_emotion\templates\comment_emotion\comment_emotion_page.html:20
 msgid "Select model"
 msgstr "Chọn mô hình"
 
-#: .\apps\comment_emotion\templates\comment_emotion\comment_emotion_page.html:28
+#: .\apps\comment_emotion\templates\comment_emotion\comment_emotion_page.html:25
+msgid "Single test"
+msgstr "Test đơn lẻ"
+
+#: .\apps\comment_emotion\templates\comment_emotion\comment_emotion_page.html:32
 msgid "Your comment"
 msgstr "Bình luận của bạn"
 
-#: .\apps\comment_emotion\templates\comment_emotion\comment_emotion_page.html:33
+#: .\apps\comment_emotion\templates\comment_emotion\comment_emotion_page.html:37
 #: .\apps\home\templates\home\home_page.html:24
+#: .\apps\home\templates\home\home_page.html:34
 msgid "Run"
 msgstr "Chạy"
 
-#: .\apps\comment_emotion\templates\comment_emotion\comment_emotion_page.html:42
+#: .\apps\comment_emotion\templates\comment_emotion\comment_emotion_page.html:46
 msgid "Batch test"
 msgstr "Test hàng loạt"
 
-#: .\apps\comment_emotion\templates\comment_emotion\comment_emotion_page.html:47
+#: .\apps\comment_emotion\templates\comment_emotion\comment_emotion_page.html:51
 msgid "Get comment at elements"
 msgstr "Lấy bình luận từ phần tử"
 
-#: .\apps\comment_emotion\templates\comment_emotion\comment_emotion_page.html:49
+#: .\apps\comment_emotion\templates\comment_emotion\comment_emotion_page.html:53
 msgid "from file"
 msgstr "từ tệp"
 
-#: .\apps\comment_emotion\templates\comment_emotion\comment_emotion_page.html:58
+#: .\apps\comment_emotion\templates\comment_emotion\comment_emotion_page.html:61
 msgid "Comment"
 msgstr "Bình luận"
-
-#: .\apps\comment_emotion\templates\comment_emotion\comment_emotion_page.html:59
-msgid "Emotion"
-msgstr "Cảm xúc"
 
 #: .\apps\home\templates\home\home_page.html:4
 msgid "Home"
@@ -76,21 +73,32 @@ msgid "Text emotion classification"
 msgstr "Phân loại cảm xúc văn bản"
 
 #: .\apps\home\templates\home\home_page.html:29
+msgid "stabled"
+msgstr "ổn định"
+
+#: .\apps\home\templates\home\home_page.html:37
+msgid "Menu sequential recommender system"
+msgstr "Hệ thống gợi ý Menu tuần tự"
+
+#: .\apps\home\templates\home\home_page.html:39
 msgid "beta"
 msgstr "thử nghiệm"
 
-#: .\templates\base.html:33
+#: .\templates\base.html:34
 msgid "ABCXYZ"
 msgstr "ABCXYZ"
 
-#: .\templates\base.html:39
+#: .\templates\base.html:40
 msgid "Good morning!"
 msgstr "Chào buổi sáng!"
 
-#: .\templates\base.html:40
+#: .\templates\base.html:41
 msgid "Good afternoon!"
 msgstr "Chào buổi chiều!"
 
-#: .\templates\base.html:41
+#: .\templates\base.html:42
 msgid "Good evening!"
 msgstr "Chào buổi tối!"
+
+#~ msgid "Emotion"
+#~ msgstr "Cảm xúc"
