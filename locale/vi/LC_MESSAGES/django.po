@@ -104,20 +104,12 @@ msgid "No function is recommended"
 msgstr "Không chức năng nào được gợi ý"
 
 #: .\apps\menu_recommender\templates\menu_recommender\menu_recommender_page.html:63
-msgid "Next function recommended"
-msgstr "Chức năng kế tiếp được gợi ý"
+msgid "Recommended"
+msgstr "Gợi ý"
 
 #: .\apps\menu_recommender\templates\menu_recommender\menu_recommender_page.html:66
-msgid "Do you want to visit"
-msgstr "Bạn có muốn đi đến"
-
-#: .\apps\menu_recommender\templates\menu_recommender\menu_recommender_page.html:66
-msgid "next"
-msgstr "tiếp theo"
-
-#: .\apps\menu_recommender\templates\menu_recommender\menu_recommender_page.html:66
-msgid "Go to"
-msgstr "Đi đến"
+msgid "Do you want to go there?"
+msgstr "Có phải bạn muốn đi đến?"
 
 #: .\templates\base.html:35
 msgid "Good morning!"
