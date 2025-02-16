@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     # for apps
     'apps.home',
     'apps.comment_emotion',
+    'apps.menu_recommender',
 ]
 
 MIDDLEWARE = [

@@ -1,0 +1,74 @@
+{% extends 'base.html' %}
+{% load i18n %}
+{% load static %}
+{% block title %}{% trans 'Comment emotion' %}{% endblock %}
+
+{% block cssHeader %}
+{% endblock %}
+
+{% block body %}
+    <script id="trans-script" data-trans-no-hint="{% trans 'No function is recommended' %}"></script>
+    <form id="menu-recommender-form">
+    {% csrf_token %}
+        <div class="row">
+            <div class="col-12 col-md-12 col-lg-6">
+                <div class="form-group">
+                    <label class="form-label">{% trans 'Select model' %}</label>
+                    <select id="model-select" class="form-select" aria-label="model">
+                        <option value="0" selected>Markov Chains</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-10">
+            <div class="col-12 col-md-3 col-lg-3">
+                <div class="form-group">
+                    <label class="form-label">{% trans 'User' %}</label>
+                    <select id="user-select" class="form-select" aria-label="user">
+                        {% for i in user_number %}
+                            <option value="user{{ i }}">user {{ i }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+            </div>
+            <div class="col-12 col-md-3 col-lg-3">
+                <div class="form-group">
+                    <label class="form-label">{% trans 'Current function name' %}</label>
+                    <select id="function-name-select" class="form-select" aria-label="function name">
+                        {% for i in function_name %}
+                            <option value="{{ i }}">{{ i }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+            </div>
+            <div class="col-12 col-md-3 col-lg-3">
+                <div class="form-group">
+                    <label class="form-label">{% trans 'Time slot' %}</label>
+                    <select id="time-slot-select" class="form-select" aria-label="time slot">
+                        {% for i in time_slot %}
+                            <option value="{{ i }}">{{ i }}:00 to {{ i|add:1 }}:00</option>
+                        {% endfor %}
+                    </select>
+                </div>
+            </div>
+            <div class="col-12 col-md-12 col-lg-12">
+                <button type="button" id="menu-recommender-form-submit-btn" class="btn btn-sm btn-primary">{% trans 'Run' %}</button>
+            </div>
+        </div>
+    </form>
+
+    <div class="toast-container position-fixed p-2">
+        <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="toast-header">
+                <strong class="me-auto">{% trans 'Next function recommended' %}</strong>
+                <a href="#"></a>
+                <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+            <div class="toast-body"><span>{% trans 'Do you want to visit' %}</span> <span class="text-danger" id="function-name-next"></span> {% trans 'next' %}? <br><a href="#">{% trans 'Go to' %}</a></div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block footerScript %}
+    <script src="{% static 'menu_recommender/menu_recommender.js' %}"></script>
+{% endblock %}

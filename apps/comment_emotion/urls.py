@@ -1,8 +1,8 @@
 from django.urls import path
 from apps.comment_emotion.views import (
-    CommentEmotionTest
+    CommentEmotion
 )
 
 urlpatterns = [
-    path('test', CommentEmotionTest.as_view(), name='CommentEmotionTest'),
+    path('test', CommentEmotion.as_view(), name='CommentEmotion'),
 ]

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-02-15 13:48+0700\n"
+"POT-Creation-Date: 2025-02-16 14:24+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -19,10 +19,12 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #: .\apps\comment_emotion\templates\comment_emotion\comment_emotion_page.html:4
+#: .\apps\menu_recommender\templates\menu_recommender\menu_recommender_page.html:4
 msgid "Comment emotion"
 msgstr "Cảm xúc của bình luận"
 
 #: .\apps\comment_emotion\templates\comment_emotion\comment_emotion_page.html:13
+#: .\apps\menu_recommender\templates\menu_recommender\menu_recommender_page.html:15
 msgid "Select model"
 msgstr "Chọn mô hình"
 
@@ -37,6 +39,7 @@ msgstr "Bình luận của bạn"
 #: .\apps\comment_emotion\templates\comment_emotion\comment_emotion_page.html:37
 #: .\apps\home\templates\home\home_page.html:24
 #: .\apps\home\templates\home\home_page.html:34
+#: .\apps\menu_recommender\templates\menu_recommender\menu_recommender_page.html:54
 msgid "Run"
 msgstr "Chạy"
 
@@ -77,28 +80,59 @@ msgid "stabled"
 msgstr "ổn định"
 
 #: .\apps\home\templates\home\home_page.html:37
-msgid "Menu sequential recommender system"
-msgstr "Hệ thống gợi ý Menu tuần tự"
+msgid "Menu recommender system"
+msgstr "Hệ thống gợi ý Menu"
 
 #: .\apps\home\templates\home\home_page.html:39
 msgid "beta"
 msgstr "thử nghiệm"
 
-#: .\templates\base.html:34
-msgid "ABCXYZ"
-msgstr "ABCXYZ"
+#: .\apps\menu_recommender\templates\menu_recommender\menu_recommender_page.html:25
+msgid "User"
+msgstr ""
 
-#: .\templates\base.html:40
+#: .\apps\menu_recommender\templates\menu_recommender\menu_recommender_page.html:35
+msgid "Current function name"
+msgstr "Tên chức năng hiện tại"
+
+#: .\apps\menu_recommender\templates\menu_recommender\menu_recommender_page.html:45
+msgid "Time slot"
+msgstr "Khoảng thời gian"
+
+#: .\apps\menu_recommender\templates\menu_recommender\menu_recommender_page.html:10
+msgid "No function is recommended"
+msgstr "Không chức năng nào được gợi ý"
+
+#: .\apps\menu_recommender\templates\menu_recommender\menu_recommender_page.html:63
+msgid "Next function recommended"
+msgstr "Chức năng kế tiếp được gợi ý"
+
+#: .\apps\menu_recommender\templates\menu_recommender\menu_recommender_page.html:66
+msgid "Do you want to visit"
+msgstr "Bạn có muốn đi đến"
+
+#: .\apps\menu_recommender\templates\menu_recommender\menu_recommender_page.html:66
+msgid "next"
+msgstr "tiếp theo"
+
+#: .\apps\menu_recommender\templates\menu_recommender\menu_recommender_page.html:66
+msgid "Go to"
+msgstr "Đi đến"
+
+#: .\templates\base.html:35
 msgid "Good morning!"
 msgstr "Chào buổi sáng!"
 
-#: .\templates\base.html:41
+#: .\templates\base.html:36
 msgid "Good afternoon!"
 msgstr "Chào buổi chiều!"
 
-#: .\templates\base.html:42
+#: .\templates\base.html:37
 msgid "Good evening!"
 msgstr "Chào buổi tối!"
+
+#~ msgid "ABCXYZ"
+#~ msgstr "ABCXYZ"
 
 #~ msgid "Emotion"
 #~ msgstr "Cảm xúc"

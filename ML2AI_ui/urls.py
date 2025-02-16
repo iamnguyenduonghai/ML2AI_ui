@@ -21,4 +21,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('apps.home.urls')),
     path('app/comment-emotion/', include('apps.comment_emotion.urls')),
+    path('app/menu-recommender/', include('apps.menu_recommender.urls')),
 ]
